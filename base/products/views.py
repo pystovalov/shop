@@ -3,7 +3,10 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "products/index.html")
+    context = {
+        "title": "Index",
+    }
+    return render(request, "products/index.html", context)
 
 
 def products(request):
